@@ -225,8 +225,6 @@ public class SellerDaoJDBC implements SellerDao{
 			DB.closeResultSet(rs);
 		}
 		
-		
-		
 	}
 	
 	
@@ -240,11 +238,13 @@ public class SellerDaoJDBC implements SellerDao{
 		obj.setDepartment(dep);
 		return obj;
 		}
+	
 		private Department instantiateDepartment(ResultSet rs) throws SQLException {
 		Department dep = new Department();
 		dep.setId(rs.getInt("DepartmentId"));
 		dep.setName(rs.getString("DepName"));
 		return dep;
+		
 		}
 
 		@Override

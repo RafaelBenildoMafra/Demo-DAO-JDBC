@@ -8,7 +8,7 @@ import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
-public class Program {
+public class ProgramSeller {
 	
 	public static void main(String[] args) {
 		
@@ -30,7 +30,6 @@ public class Program {
 		}
 		
 		System.out.println("\n=== TESTE 3: seller findAll =====");
-		
 		list = sellerDao.findAll();
 		
 		for(Seller obj: list) {
@@ -44,7 +43,6 @@ public class Program {
 		System.out.println("Inserted! News id - " + newSeller);
 		
 		System.out.println("\n=== TESTE 5: seller Update =====");
-
 		seller = sellerDao.findById(1);
 		seller.setName("Martha Waine");
 		sellerDao.update(seller);
