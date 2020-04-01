@@ -25,6 +25,10 @@ public class Seller implements Serializable{
 		this.department = department;
 	}
 
+	public Seller() {
+		
+	}
+
 	public Integer getId() {
 		return id;
 	}
@@ -71,6 +75,23 @@ public class Seller implements Serializable{
 
 	public void setDepartment(Department department) {
 		this.department = department;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Seller other = (Seller) obj;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		return true;
 	}
 
 	@Override
